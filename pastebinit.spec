@@ -1,4 +1,5 @@
-Summary:	Command line pastebin
+Summary:	Command line Pastebin
+Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
 Version:	0.6
 Release:	0.2
@@ -15,6 +16,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Pastebinit is a really small piece of Python that acts as a Pastebin
 client, you simply tell it a file or to read from the stdin and it
 will paste the information on a Pastebin.
+
+%description -l pl.UTF-8
+pastebinit to naprawdę mały kawałek kodu w Pythonie działający jako
+klient Pastebin - wystarczy podać mu plik albo nakazać czytanie ze
+standardowego wyjścia, a on przeklei informacje na Pastebin.
 
 %prep
 %setup -q
