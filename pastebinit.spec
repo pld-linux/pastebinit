@@ -1,12 +1,12 @@
 Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
-Version:	0.6
+Version:	0.7
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://librarian.launchpad.net/5579545/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	25a9cd52209da673fe2c519d2a91eb47
+Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.py
+# Source0-md5:	7fa157da9559cd06e70f43628f428f0f
 URL:		http://www.stgraber.org/?cat=5
 Requires:	python-modules
 BuildArch:	noarch
@@ -23,13 +23,12 @@ klient Pastebin - wystarczy podać mu plik albo nakazać czytanie ze
 standardowego wyjścia, a on przeklei informacje na Pastebin.
 
 %prep
-%setup -q
+%setup -q -c -T
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-install %{name} $RPM_BUILD_ROOT%{_bindir}
-install %{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,4 +36,3 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/pastebinit
-%{_mandir}/man1/pastebinit.1*
