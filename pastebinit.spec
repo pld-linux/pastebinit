@@ -1,12 +1,12 @@
 Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
-Version:	0.7
+Version:	0.8.1
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.py
-# Source0-md5:	7fa157da9559cd06e70f43628f428f0f
+Source0:	http://www.stgraber.org/download/projects/pastebin/pastebinit-0.8.1.tar.gz
+# Source0-md5:	1727da833b6eb0769f9d341e16e765c9
 URL:		http://www.stgraber.org/?cat=5
 Requires:	python-modules
 BuildArch:	noarch
@@ -23,7 +23,7 @@ klient Pastebin - wystarczy podać mu plik albo nakazać czytanie ze
 standardowego wyjścia, a on przeklei informacje na Pastebin.
 
 %prep
-%setup -q -c -T
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
