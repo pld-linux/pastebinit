@@ -5,7 +5,7 @@ Version:	0.8.1
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://www.stgraber.org/download/projects/pastebin/pastebinit-0.8.1.tar.gz
+Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.tar.gz
 # Source0-md5:	1727da833b6eb0769f9d341e16e765c9
 URL:		http://www.stgraber.org/?cat=5
 Requires:	python-modules
