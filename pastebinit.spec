@@ -2,7 +2,7 @@ Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
 Version:	0.8.1
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.tar.gz
