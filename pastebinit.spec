@@ -2,7 +2,7 @@ Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
 Version:	0.10
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.tar.gz
@@ -29,7 +29,7 @@ standardowego wyjścia, a on przeklei informacje na Pastebin.
 %setup -q
 %patch0 -p0
 
-%{__sed} -i -e 's#http://paste.stgraber.org#http://pld.pastebin.com#g' pastebinit
+%{__sed} -i -e 's#http://pastebin.com#http://pld.pastebin.com#g' pastebinit
 
 %install
 rm -rf $RPM_BUILD_ROOT
