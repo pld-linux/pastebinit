@@ -1,13 +1,12 @@
 Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
-Version:	0.10
-Release:	3
+Version:	0.11
+Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.stgraber.org/download/projects/pastebin/%{name}-%{version}.tar.gz
-# Source0-md5:	fd468016633908745c31c965aa2878a2
-Patch0:		%{name}-stdin.patch
+# Source0-md5:	8342af2467545402922477a5710083f6
 URL:		http://www.stgraber.org/category/pastebinit
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
@@ -27,7 +26,6 @@ standardowego wyjścia, a on przeklei informacje na Pastebin.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %{__sed} -i -e 's#http://pastebin.com#http://pld.pastebin.com#g' pastebinit
 
