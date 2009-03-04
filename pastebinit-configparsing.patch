@@ -1,0 +1,35 @@
+--- pastebinit-0.11/pastebinit	2009-03-04 11:55:28.498112818 +0200
++++ /usr/bin/pastebinit	2009-03-04 11:54:58.078111114 +0200
+@@ -177,6 +177,12 @@
+ 	def getFirstNodeText(nodes, title):
+ 		return getText(getFirstNode(nodes, title).childNodes)
+ 
++	def nodeExists(nodes, title):
++		node = nodes.getElementsByTagName(title)
++		if node == []:
++			return None
++		return True
++
+ 	# Display usage instructions
+ 	def Usage ():
+ 		print "pastebinit v" + version
+@@ -230,10 +236,14 @@
+ 	#Parse configuration file
+ 	if gotconfigxml == 1:
+ 		try:
+-			configxml = xml.dom.minidom.parseString(configfile)
+-			website = getFirstNodeText(configxml, "pastebin")
+-			user = getFirstNodeText(configxml, "author")
+-			format = getFirstNodeText(configxml, "format")
+-			jabberid = getFirstNodeText(configxml, "jabberid")
++			configxml = xml.dom.minidom.parseString(configtext)
++			if nodeExists(configxml, "pastebin"):
++				website = getFirstNodeText(configxml, "pastebin")
++			if nodeExists(configxml, "author"):
++				user = getFirstNodeText(configxml, "author")
++			if nodeExists(configxml, "format"):
++				format = getFirstNodeText(configxml, "format")
++			if nodeExists(configxml, "jabberid"):
++				jabberid = getFirstNodeText(configxml, "jabberid")
+ 		except KeyboardInterrupt:
+ 			sys.exit(_("KeyboardInterrupt caught."))
