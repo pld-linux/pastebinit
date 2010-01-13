@@ -8,7 +8,7 @@ Group:		Applications
 Source0:	http://launchpad.net/pastebinit/trunk/%{version}/+download/%{name}-%{version}.tar.gz
 # Source0-md5:	64b620d7ae9fbdac8f2e23fbfecbdec3
 Patch0:		%{name}-configparsing.patch
-URL:		http://www.stgraber.org/category/pastebinit
+URL:		https://launchpad.net/pastebinit
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
 Requires:	python-modules
