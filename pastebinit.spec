@@ -10,6 +10,7 @@ Source0:	%{name}-71.tar.bz2
 # Source0-md5:	e6264e2c75691a920f4ede8edba23028
 Patch0:		%{name}-configparsing.patch
 URL:		https://launchpad.net/pastebinit
+BuildRequires:	gettext-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
 Requires:	python-configobj
