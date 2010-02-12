@@ -12,6 +12,7 @@ Patch0:		%{name}-configparsing.patch
 URL:		https://launchpad.net/pastebinit
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
+Requires:	python-configobj
 Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
