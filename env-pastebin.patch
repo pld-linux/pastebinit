@@ -1,0 +1,11 @@
+--- pastebinit-1.3/pastebinit~	2012-03-10 10:40:09.143624411 +0200
++++ pastebinit-1.3/pastebinit	2012-03-09 23:25:19.581314931 +0200
+@@ -183,7 +179,7 @@
+         print _("\t-u <username> -p <password>")
+ 
+     # Set defaults
+-    website = defaultPB
++    website = os.environ.get("PASTEBIN") or defaultPB
+     user = os.environ.get('USER')
+     jabberid = ""
+     title = ""
