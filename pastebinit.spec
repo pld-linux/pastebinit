@@ -1,12 +1,12 @@
 Summary:	Command line Pastebin
 Summary(pl.UTF-8):	Pastebin działający z linii poleceń
 Name:		pastebinit
-Version:	1.3
-Release:	2
+Version:	1.3.1
+Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://launchpad.net/pastebinit/trunk/%{version}/+download/%{name}-%{version}.tar.gz
-# Source0-md5:	0c7dc52245fb92967de641cd3ccffbc3
+# Source0-md5:	ebe0f8f118519d3505eabe0f48a10ad5
 Patch0:		env-pastebin.patch
 URL:		https://launchpad.net/pastebinit
 BuildRequires:	gettext-devel
