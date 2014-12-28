@@ -9,7 +9,7 @@ Source0:	http://launchpad.net/pastebinit/trunk/%{version}/+download/%{name}-%{ve
 # Source0-md5:	cfa3337ee9acb1f0b02e952b879f63a7
 Patch0:		env-pastebin.patch
 URL:		https://launchpad.net/pastebinit
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
 Requires:	python-configobj
