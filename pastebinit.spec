@@ -29,7 +29,7 @@ standardowego wyjścia, a on przeklei informacje na Pastebin.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %{__sed} -i -e '1s,^#!.*python,#!%{__python},' pastebinit
 
